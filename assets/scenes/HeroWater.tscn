@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/sprites/water_default.png" type="Texture" id=1]
 [ext_resource path="res://assets/scripts/HeroWater.gd" type="Script" id=2]
@@ -31,7 +31,14 @@ animations = [ {
 radius = 8.47361
 height = 4.77697
 
+[sub_resource type="Environment" id=7]
+background_mode = 4
+glow_enabled = true
+glow_strength = 0.95
+glow_blend_mode = 0
+
 [node name="HeroWater" type="KinematicBody2D"]
+modulate = Color( 1.2, 1.2, 1.25, 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -42,3 +49,6 @@ centered = false
 position = Vector2( 15.9951, 23.2911 )
 rotation = 1.5708
 shape = SubResource( 6 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 7 )

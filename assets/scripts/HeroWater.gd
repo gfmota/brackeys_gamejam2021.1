@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-const ACCELERATION : int = 10
-const GRAVITY : int = 10
-const JUMP_HEIGHT : int = 10
-const MAX_SPEED : int = 10
+const ACCELERATION : int = 50
+const GRAVITY : int = 20
+const JUMP_HEIGHT : int = -550
+const MAX_SPEED : int = 200
 var friction : bool
 var motion : Vector2
 onready var sprite = $Sprite

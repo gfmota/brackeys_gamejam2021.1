@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/sprites/fire_default.png" type="Texture" id=1]
 [ext_resource path="res://assets/scripts/HeroFire.gd" type="Script" id=2]
@@ -39,7 +39,15 @@ animations = [ {
 radius = 9.25001
 height = 4.58575
 
+[sub_resource type="Environment" id=9]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 1.0
+glow_strength = 0.95
+glow_blend_mode = 0
+
 [node name="HeroFire" type="KinematicBody2D"]
+modulate = Color( 1.25, 1.2, 1.2, 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -49,3 +57,6 @@ centered = false
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 15.6428, 20.5679 )
 shape = SubResource( 8 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 9 )
