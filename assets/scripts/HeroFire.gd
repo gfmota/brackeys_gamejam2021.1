@@ -6,7 +6,7 @@ const JUMP_HEIGHT : int = -550
 const MAX_SPEED : int = 200
 var friction : bool
 var motion : Vector2
-onready var sprite = $Sprite
+onready var sprite : AnimatedSprite = $Sprite
 
 func _ready():
 	sprite.play("default")

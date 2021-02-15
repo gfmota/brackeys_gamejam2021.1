@@ -37,8 +37,11 @@ glow_enabled = true
 glow_strength = 0.95
 glow_blend_mode = 0
 
-[node name="HeroWater" type="KinematicBody2D"]
+[node name="HeroWater" type="KinematicBody2D" groups=[
+"WaterHero",
+]]
 modulate = Color( 1.2, 1.2, 1.25, 1 )
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

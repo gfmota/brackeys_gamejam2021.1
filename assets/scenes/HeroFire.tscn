@@ -46,8 +46,11 @@ glow_intensity = 1.0
 glow_strength = 0.95
 glow_blend_mode = 0
 
-[node name="HeroFire" type="KinematicBody2D"]
+[node name="HeroFire" type="KinematicBody2D" groups=[
+"FireHero",
+]]
 modulate = Color( 1.25, 1.2, 1.2, 1 )
+collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
