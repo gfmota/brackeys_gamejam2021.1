@@ -34,4 +34,9 @@ func _physics_process(delta):
 			sprite.play("falling")
 		if friction:
 			motion.x = lerp(motion.x, 0, 0.2)
-	motion = move_and_slide(motion, Vector2(0, -1))
+	motion = move_and_slide(motion, Vector2(0, -1),
+					false, 4, PI/4, false)
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("Box"):
+			collision.collider.apply_central_impulse(-collision.normal * 50)
