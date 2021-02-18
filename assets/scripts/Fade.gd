@@ -14,14 +14,12 @@ func fade_in(level):
 	text.text = "LEVEL " + str(level)
 	tween.interpolate_property(text, "modulate", Color(1,1,1,0), Color(1,1,1,1), 0.5)
 	tween.start()
-	timer.wait_time = 1.0
 	timer.start()
 
 func fade_out():
 	text.text = ""
-	tween.interpolate_property(self, "modulate", Color(1,1,1,0), Color(1,1,1,1), 0.5)
+	tween.interpolate_property(self, "modulate", Color(1,1,1,0), Color(1,1,1,1), 1)
 	tween.start()
-	timer.wait_time = 0.5
 	timer.start()
 	finish = true
 
