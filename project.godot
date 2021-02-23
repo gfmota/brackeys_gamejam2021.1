@@ -16,7 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Brackeys Gamejam 2021 . 1"
+run/main_scene="res://assets/scenes/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+MenuMusic="*res://assets/scenes/MenuMusic.tscn"
+InGameMusic="*res://assets/scenes/InGameMusic.tscn"
 
 [display]
 

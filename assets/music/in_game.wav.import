@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/in_game.wav-dbc72d562ff1daa35602c6dc0bb85470.sample"
+
+[deps]
+
+source_file="res://assets/music/in_game.wav"
+dest_files=[ "res://.import/in_game.wav-dbc72d562ff1daa35602c6dc0bb85470.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
