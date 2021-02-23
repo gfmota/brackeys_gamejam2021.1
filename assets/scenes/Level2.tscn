@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://assets/scenes/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scenes/Door.tscn" type="PackedScene" id=2]
@@ -10,26 +10,34 @@
 [ext_resource path="res://assets/scenes/Level3.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SegmentShape2D" id=1]
-a = Vector2( 196, 34 )
-b = Vector2( 108, 34 )
+a = Vector2( 196, 32 )
+b = Vector2( 108, 32 )
 
 [sub_resource type="SegmentShape2D" id=2]
 a = Vector2( 392, -128 )
 b = Vector2( 136, -128 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( 388, 32 )
+b = Vector2( 300, 32 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 484, -256 )
+b = Vector2( 204, -256 )
+
+[sub_resource type="DynamicFont" id=10]
 size = 20
 outline_size = 4
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 20
 outline_size = 4
 outline_color = Color( 0.027451, 0.909804, 0.87451, 1 )
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 20
 outline_size = 4
 outline_color = Color( 0.992157, 0.454902, 0.0235294, 1 )
@@ -47,26 +55,23 @@ tile_data = PoolIntArray( 65538, 63, 0, 65539, 7, 0, 65540, 7, 0, 65541, 7, 0, 6
 position = Vector2( 156, 136 )
 
 [node name="Water" type="Area2D" parent="."]
-position = Vector2( 152, 416 )
+position = Vector2( 152, 414 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
-position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Water"]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -32 )
 shape = SubResource( 2 )
 
 [node name="Fire" type="Area2D" parent="."]
-position = Vector2( 152, 416 )
+position = Vector2( 152, 414 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fire"]
-position = Vector2( 192, -2 )
-shape = SubResource( 1 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Fire"]
-position = Vector2( 96, -98 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="Labels" type="Node2D" parent="."]
 
@@ -75,7 +80,7 @@ margin_left = 628.0
 margin_top = 76.0
 margin_right = 773.0
 margin_bottom = 139.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 10 )
 text = "with
 with
 Simple, right?"
@@ -90,7 +95,7 @@ margin_left = 612.0
 margin_top = 76.0
 margin_right = 784.0
 margin_bottom = 95.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.141176, 0.32549, 0.984314, 1 )
 text = "Water         water"
 __meta__ = {
@@ -102,7 +107,7 @@ margin_left = 625.124
 margin_top = 97.378
 margin_right = 772.124
 margin_bottom = 116.378
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0.960784, 0.0352941, 0.0352941, 1 )
 text = "Fire         fire"
 __meta__ = {
