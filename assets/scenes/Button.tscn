@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/sprites/button.png" type="Texture" id=1]
+[ext_resource path="res://assets/scripts/Button.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.8029, 18.6203 )
+
+[sub_resource type="Environment" id=2]
+glow_enabled = true
+glow_blend_mode = 0
+
+[node name="Button" type="Area2D"]
+modulate = Color( 1, 0, 0, 1 )
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="Sprite1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 2
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 25.5134, 18.5824 )
+shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
